@@ -1,0 +1,190 @@
+<html>
+	<head>
+		<title>The Final Challenge</title>
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+		<link href="style.css" type = "text/css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1>The Final Challenge</h1>
+			<nav>
+				<ul>
+					<li class = "complete" onclick = show('bracket')>Bric A Brackets</li>
+					<li class = "complete" onclick = show('probably')>Probably Wrong</li>
+					<li class = "complete" onclick = show('triangle')>Tricksy Triangles</li>
+					<li class = "complete" onclick = show('train')>The Midnight Train</li>
+					<li class = "complete" onclick = show('dot')>A Dot and a Dash</li>
+					<li class = "complete" onclick = show('lock')>Locked Out</li>
+					<li class = "complete" onclick = show('double')>Double Trouble</li>
+					<li class = "on" onclick = show('flip')>Flipping the Cards</li>
+					<li>The Cunningham Conundrum</li>
+					<li>McGrath's Graphs</li>
+					<li>Bridgesing the Gap</li>
+					<li>The Urban Ultimatum</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id = "black" class = "question" style="display:block">
+				<div class = "cipher">
+					<p>Welcome to the Final Challenge. Select the question you would like to attempt from the selection above.</p>
+				</div>
+			</div>
+			
+			<div id = "bracket" class = "question" style="display:none">
+				<h2>Bric A Brackets</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: *</li>
+				</ul>
+				<div class = "cipher">
+					<p> We'll start easy. Break the brackets: <br><br>(1)×(2) - (3)×(4) <br><br></p>
+				</div>
+			</div>
+			
+			<div id = "probably" class = "question" style="display:none">
+				<h2>Probably Wrong</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: *</li>
+				</ul>
+				<div class = "cipher">
+					<p>What's the probability that if I select two cards from the deck, both are red?</p>
+				</div>
+			</div>
+			
+			<div id = "triangle" class = "question" style="display:none">
+				<h2>Tricksy Triangles</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: **</li>
+				</ul>
+				<div class = "cipher">
+					<p>Getting harder...<br><br>
+					For this challenge, find the value of y. Note that the triangles (as with everything in Maths) are not to scale. Sorry.<br><br>
+					Lines with the same letters can be placed beside each other.</p>
+				</div>
+			</div>
+			
+			<div id = "train" class = "question" style="display:none">
+				<h2>The Midnight Train</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ****</li>
+				</ul>
+				<div class = "cipher">
+					<p>Here's your first actual <strong>challenge</strong>. :)<br><br>
+					The Midnight Train leaves station A at 23:00 and reaches Station B at 12:10, travelling at a constant speed of 6 mph.<br>
+					The day after, the Midnight Train leaves station A at 23:00 and reaches Station B at 23:50, travelling at a constant speed of 8 mph.<br>
+					What speed should the Midnight Train travel at to reach Station B at exactly midnight, if it leaves at 23:00?<br><br>
+					Give your answer in mph.
+					</p>
+				</div>
+			</div>
+			
+			<div id = "dot" class = "question" style="display:none">
+				<h2>A Dot and a Dash</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ***</li>
+				</ul>
+				<div class = "cipher">
+					<p>How about some graphs?</p><br>
+					<p>Let's see: what's the shortest distance from point D to line A?</p>
+					<p>Surely that's easy enough...</p>
+				</div>
+			</div>
+			
+			<div id = "lock" class = "question" style="display:none">
+				<h2>Locked Out</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: **</li>
+				</ul>
+				<div class = "cipher">
+					<p>Um, this is embarrassing...</p><br>
+					<p>I've, um, forgotten the password to unlock the next question.</p></br>
+					<p>Good luck, I guess.</p>
+				</div>
+			</div>
+			
+			<div id = "double" class = "question" style="display:none">
+				<h2>Double Trouble</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ***</li>
+				</ul>
+				<div class = "cipher">
+					<p>Solve for 0 ≤ x &#x3c; 2π</p><br><br>
+					<p>(sinx + 1)(2cos<sup>2</sup>x - cosx - 1) = 0</p><br><br>
+					<p>Use your answers (in increasing order) to find a second question to be solved.</p>
+				</div>
+			</div>
+			
+			<div id = "flip" class = "question" style="display:none">
+				<h2>Flipping the Cards</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ***</li>
+				</ul>
+				<div class = "cipher">
+					<p>SNAP! I win.</p><br>
+					<p>I don't know what you're waiting for. Unless you want a Snap rematch.</p><br>
+					<p>Oh, wait. You want the question. Um... </p><br>
+					<p>Here's one: what is the sum of the first 10 terms? Yeah, that'll do.</p>
+				</div>
+			</div>			
+
+		</main>
+		<form>
+			<input id="answerbox" name="answer" type="text" placeholder="Check an answer..."/>
+			<input name="answerButton" type="button" onclick = "submitAnswer()" value="Submit"/> 
+		</form>
+	</body>
+	<script>
+	
+		var current = "black";
+		function show(chosen){
+			document.getElementById(current).style.display="none";
+			document.getElementById(chosen).style.display="block";
+			current = chosen;
+		}
+		
+		function submitAnswer() {
+			var answer, count;
+			setupVars=[
+			"770"
+			];
+			answer = document.getElementById("answerbox").value;
+			answer = answer.toLowerCase();
+			count = 0;
+
+			for (i=0; i<setupVars.length; i++) {
+				if (answer == setupVars[i]){
+					document.getElementById("answerbox").style.backgroundColor="lightgreen";
+					setTimeout('window.location.href = "The Cunningham Conundrum.html";', 1000, true);
+					break;
+				} else {
+					count += 1;
+				}
+			}
+
+			if (answer == ""){
+				document.getElementById("answerbox").style.backgroundColor="white";
+			} else if (count == setupVars.length){
+				document.getElementById("answerbox").style.backgroundColor="#ff8080";
+			}
+		}
+		
+		window.addEventListener('keydown', function(e) {
+			if (e.keyIdentifier == 'U+000A' || e.keyIdentifier == 'Enter' || e.keyCode == 13) {
+				if (e.target.nodeName == 'INPUT' && e.target.type == 'text') {
+					e.preventDefault();
+					submitAnswer();
+					return false;
+				}
+			}
+		}, true);
+	</script>
+</html>

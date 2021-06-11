@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>The Final Challenge</title>
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+		<link href="style.css" type = "text/css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1>The Final Challenge</h1>
+			<nav>
+				<ul>
+					<li class = "complete" onclick = show('bracket')>Bric A Brackets</li>
+					<li class = "on" onclick = show('probably')>Probably Wrong</li>
+					<li>Tricksy Triangles</li>
+					<li>The Midnight Train</li>
+					<li>A Dot and a Dash</li>
+					<li>Locked Out</li>
+					<li>Double Trouble</li>
+					<li>Flipping the Cards</li>
+					<li>The Cunningham Conundrum</li>
+					<li>McGrath's Graphs</li>
+					<li>Bridgesing the Gap</li>
+					<li>The Urban Ultimatum</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id = "black" class = "question" style="display:block">
+				<div class = "cipher">
+					<p>Welcome to the Final Challenge. Select the question you would like to attempt from the selection above.</p>					<br>
+				</div>
+			</div>
+			
+			<div id = "bracket" class = "question" style="display:none">
+				<h2>Bric A Brackets</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: *</li>
+				</ul>
+				<div class = "cipher">
+					<p> We'll start easy. Break the brackets: <br><br>(1)×(2) - (3)×(4) <br><br></p>
+				</div>
+			</div>
+			
+			<div id = "probably" class = "question" style="display:none">
+				<h2>Probably Wrong</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: *</li>
+				</ul>
+				<div class = "cipher">
+					<p>What's the probability that if I select two cards from the deck, both are red?</p>
+				</div>
+			</div>
+		</main>
+		<form>
+			<input id="answerbox" name="answer" type="text" placeholder="Check an answer..."/>
+			<input name="answerButton" type="button" onclick = "submitAnswer()" value="Submit"/> 
+		</form>
+	</body>
+	<script>
+	
+		var current = "black";
+		function show(chosen){
+			document.getElementById(current).style.display="none";
+			document.getElementById(chosen).style.display="block";
+			current = chosen;
+		}
+		
+		function submitAnswer() {
+			var answer, count;
+			setupVars=[
+			"2/5", "2|5", "0.4"
+			];
+			answer = document.getElementById("answerbox").value;
+			answer = answer.toLowerCase();
+			count = 0;
+
+			for (i=0; i<setupVars.length; i++) {
+				if (answer == setupVars[i]){
+					document.getElementById("answerbox").style.backgroundColor="lightgreen";
+					setTimeout('window.location.href = "Tricksy Triangles.html";', 1000, true);
+					break;
+				} else {
+					count += 1;
+				}
+			}
+
+			if (answer == ""){
+				document.getElementById("answerbox").style.backgroundColor="white";
+			} else if (count == setupVars.length){
+				document.getElementById("answerbox").style.backgroundColor="#ff8080";
+			}
+		}
+		
+		window.addEventListener('keydown', function(e) {
+			if (e.keyIdentifier == 'U+000A' || e.keyIdentifier == 'Enter' || e.keyCode == 13) {
+				if (e.target.nodeName == 'INPUT' && e.target.type == 'text') {
+					e.preventDefault();
+					submitAnswer();
+					return false;
+				}
+			}
+		}, true);
+	</script>
+</html>

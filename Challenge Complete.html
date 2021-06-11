@@ -1,0 +1,202 @@
+<html>
+	<head>
+		<title>The Final Challenge</title>
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+		<link href="style.css" type = "text/css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1>The Final Challenge</h1>
+			<nav>
+				<ul>
+					<li class = "complete" onclick = show('bracket')>Bric A Brackets</li>
+					<li class = "complete" onclick = show('probably')>Probably Wrong</li>
+					<li class = "complete" onclick = show('triangle')>Tricksy Triangles</li>
+					<li class = "complete" onclick = show('train')>The Midnight Train</li>
+					<li class = "complete" onclick = show('dot')>A Dot and a Dash</li>
+					<li class = "complete" onclick = show('lock')>Locked Out</li>
+					<li class = "complete" onclick = show('double')>Double Trouble</li>
+					<li class = "complete" onclick = show('flip')>Flipping the Cards</li>
+					<li class = "complete" onclick = show('cunningham')>The Cunningham Conundrum</li>
+					<li class = "complete" onclick = show('mcgrath')>McGrath's Graphs</li>
+					<li class = "complete" onclick = show('bridges')>Bridgesing the Gap</li>
+					<li class = "complete" onclick = show('urban')>The Urban Ultimatum</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id = "black" class = "question" style="display:block">
+				<div class = "cipher">
+					<p>That's it. You have bested all 12 of my challenges. Hope you had some fun solving at least one of them! <br><br>
+					Thanks again for taking part in all the puzzles and challenges that I have set you all over the last six years, <br><br>
+					Lewis :)</p>
+				</div>
+			</div>
+			
+			<div id = "bracket" class = "question" style="display:none">
+				<h2>Bric A Brackets</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: *</li>
+				</ul>
+				<div class = "cipher">
+					<p> We'll start easy. Break the brackets: <br><br>(1)×(2) - (3)×(4) <br><br></p>
+				</div>
+			</div>
+			
+			<div id = "probably" class = "question" style="display:none">
+				<h2>Probably Wrong</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: *</li>
+				</ul>
+				<div class = "cipher">
+					<p>What's the probability that if I select two cards from the deck, both are red?</p>
+				</div>
+			</div>
+			
+			<div id = "triangle" class = "question" style="display:none">
+				<h2>Tricksy Triangles</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: **</li>
+				</ul>
+				<div class = "cipher">
+					<p>Getting harder...<br><br>
+					For this challenge, find the value of y. Note that the triangles (as with everything in Maths) are not to scale. Sorry.<br><br>
+					Lines with the same letters can be placed beside each other.</p>
+				</div>
+			</div>
+			
+			<div id = "train" class = "question" style="display:none">
+				<h2>The Midnight Train</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ****</li>
+				</ul>
+				<div class = "cipher">
+					<p>Here's your first actual <strong>challenge</strong>. :)<br><br>
+					The Midnight Train leaves station A at 23:00 and reaches Station B at 12:10, travelling at a constant speed of 6 mph.<br>
+					The day after, the Midnight Train leaves station A at 23:00 and reaches Station B at 23:50, travelling at a constant speed of 8 mph.<br>
+					What speed should the Midnight Train travel at to reach Station B at exactly midnight, if it leaves at 23:00?<br><br>
+					Give your answer in mph.
+					</p>
+				</div>
+			</div>
+			
+			<div id = "dot" class = "question" style="display:none">
+				<h2>A Dot and a Dash</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ***</li>
+				</ul>
+				<div class = "cipher">
+					<p>How about some graphs?</p><br>
+					<p>Let's see: what's the shortest distance from point D to line A?</p>
+					<p>Surely that's easy enough...</p>
+				</div>
+			</div>
+			
+			<div id = "lock" class = "question" style="display:none">
+				<h2>Locked Out</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: **</li>
+				</ul>
+				<div class = "cipher">
+					<p>Um, this is embarrassing...</p><br>
+					<p>I've, um, forgotten the password to unlock the next question.</p></br>
+					<p>Good luck, I guess.</p>
+				</div>
+			</div>
+			
+			<div id = "double" class = "question" style="display:none">
+				<h2>Double Trouble</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ***</li>
+				</ul>
+				<div class = "cipher">
+					<p>Solve for 0 ≤ x &#x3c; 2π</p><br><br>
+					<p>(sinx + 1)(2cos<sup>2</sup>x - cosx - 1) = 0</p><br><br>
+					<p>Use your answers (in increasing order) to find a second question to be solved.</p>
+				</div>
+			</div>
+			
+			<div id = "flip" class = "question" style="display:none">
+				<h2>Flipping the Cards</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ***</li>
+				</ul>
+				<div class = "cipher">
+					<p>SNAP! I win.</p><br>
+					<p>I don't know what you're waiting for. Unless you want a Snap rematch.</p><br>
+					<p>Oh, wait. You want the question. Um... </p><br>
+					<p>Here's one: what is the sum of the first 10 terms? Yeah, that'll do.</p>
+				</div>
+			</div>
+
+			<div id = "cunningham" class = "question" style="display:none">
+				<h2>The Cunningham Conundrum</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ****</li>
+				</ul>
+				<div class = "cipher">
+					<p>Mrs Cunningham has been given 10 new Funko Pops.<br>
+					There is space for 9 Funko Pops on the shelf, so one will need to be stacked on top of another.<br>
+					How many different ways can Mrs Cunningham order her Funko Pops?
+					</p>
+				</div>
+			</div>
+			
+			<div id = "mcgrath" class = "question" style="display:none">
+				<h2>McGrath's Graphs</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ***</li>
+				</ul>
+				<div class = "cipher">
+					<p>Find the locus of point P(x,y) such that (d<sub>CP</sub>)<sup>2</sup> - d(<sub>BP</sub>)<sup>2</sup> = 24</p>
+				</div>
+			</div>
+			
+			<div id = "bridges" class = "question" style="display:none">
+				<h2>Bridgesing the Gap</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: ****</li>
+				</ul>
+				<div class = "cipher">
+					<p>Points A, B and C represent three nearby islands that are to be connected by bridges. If each unit on the coordinate axis is 30 meters, and every 5 meters of bridge costs £100, what is the minimum cost that allows all three islands to be connected by bridge?</p>
+				</div>
+			</div>
+			
+			<div id = "urban" class = "question" style="display:none">
+				<h2>The Urban Ultimatum</h2>
+				<br>
+				<ul class = "difficulty">
+					<li>Difficulty: *****</li>
+				</ul>
+				<div class = "cipher">
+					<p>I guess this is it.<br> The final challenge of the final challenge.<br> 6 years of questions and puzzles have led to this moment. <br>Can you solve my ultimate question? Good luck...<br><br>
+					Here it is: KVLZGUZRXLYTDVUYLVTDOWLKHRZZRXZUYKLPNRFGYJPUUTKWDRRXYX</p><br><br>
+					<p style = "color: white;">Hint: Matrices are sometimes the greatest.</p><br><br>
+				</div>
+			</div>
+
+		</main>
+	</body>
+	<script>
+	
+		var current = "black";
+		function show(chosen){
+			document.getElementById(current).style.display="none";
+			document.getElementById(chosen).style.display="block";
+			current = chosen;
+		}
+		
+	</script>
+</html>
